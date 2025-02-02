@@ -1,0 +1,92 @@
+/* Paleta de colores 
+#689F38 = dark primary color
+#DCEDC8 - lith primary color
+#8BC34A - primary color 
+#212121 - text and icons
+#9E9E9E - accent color
+#212121 - primary text
+#757575 - secondary text
+#BDBDBD - divider color
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #212121 !important; 
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #8BC34A !important;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center; 
+}
+
+.navbar-nav .nav-link {
+  color: #8BC34A !important;
+  margin-left: 20px;
+  font-size: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #9E9E9E !important;
+}
+
+/* .form-control {
+  border-radius: 20px;
+  border: 1px solid #BDBDBD; 
+  background-color: #9E9E9E;
+  color: #DCEDC8;
+  margin: 0 50px; 
+}
+
+.form-control:hover {
+  background-color: #9E9E9E;
+} */
+
+.dropdown-menu {
+  background-color: #212121;
+}
+
+.dropdown-item {
+  color: #8BC34A !important;
+}
+
+.dropdown-item:hover {
+  background-color: #9E9E9E !important;
+  color: #212121 !important;
+}
+
+
+.navbar-nav .nav-item:last-child {
+  margin-left: auto;
+}
+
+.navbar-toggler-icon {
+  background-color: #8BC34A;
+}
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  object-position: top center;  
+}

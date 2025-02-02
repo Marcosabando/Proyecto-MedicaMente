@@ -1,0 +1,220 @@
+.head{
+  background-image: url(../images/brandon-holmes-GofYo51GQ_4-unsplash.jpg);
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: sepia(2) saturate(2) hue-rotate(90deg) brightness(0.6);
+
+  /* .carrousel{
+
+  } */
+
+
+  h1 {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    width: 28rem;
+    text-align: center;
+    font-weight: bold;
+    color: #8bc34a;
+  }
+}
+
+.advance {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.custom-card {
+  display: flex;
+  width: 25rem;
+  height: 25rem;
+  margin-top: 3rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1rem;
+  background-color: #DCEDC8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.custom-card-img {
+  border-radius: 1rem 1rem 0 0;
+  width: 25rem;
+  height: 13rem;
+  object-fit: cover;
+}
+
+.custom-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  p{
+    color: #757575;
+  }
+}
+
+.btn-primary {
+  color: #DCEDC8;
+  padding: 6px 12px;
+  margin-top: 1rem;
+  border-style: none;
+  background-color: #8BC34A;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #7bbf3b;
+  transform: translateY(-2px); 
+}
+
+
+
+.allHospitals {
+
+  .row {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .our {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .our h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #212121;
+  }
+
+  .card {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #DCEDC8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  }
+  .card img {
+    width: 18rem;
+    height: 12rem;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+    text-align: start;
+  }
+  span{
+    font-weight: bold;
+  }
+
+  .card-title {
+    font-weight: bold;
+    color: #212121;
+  }
+
+  .card-text {
+    margin-bottom: 1rem;
+
+    a{
+      color: #757575;
+    }
+  }
+
+  .nav-item{
+    list-style-type: none;
+    
+  }
+
+  .dropdown-menu{
+    background-color: #DCEDC8;
+    text-align: center;
+  }
+
+  .btn-primary {
+    color: #DCEDC8;
+    margin-top: 1rem;
+    border-style: none;
+    background-color: #8BC34A;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #7bbf3b;
+    transform: translateY(-2px); 
+  }
+}
+
+
+.icons {
+  margin-top: 2rem;
+  padding: 4rem 0;
+  background-color: #DCEDC8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.icons .container {
+  display: flex;
+  gap: 3rem;
+}
+
+.icons article {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icons article:hover {
+  transform: translateY(-5px);
+}
+
+.icons img {
+  max-width: 60px;
+  transition: transform 0.3s ease;
+}
+
+.icons article:hover img {
+  transform: scale(1.1);
+}
+
+.icons span {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.icons p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}

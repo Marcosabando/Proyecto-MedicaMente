@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/3947aef1e2.js" crossorigin="anonymous"></script>
+    <title>Profile</title>
+    <link rel="stylesheet" href="/stylesheets/commonStyles.css" />
+    <link rel="stylesheet" href="/stylesheets/singleHospital.css" />
+  </head>
+  <body>
+    <header><%- include("modules/navbar.ejs") %></header>
+    <main>
+      <section class="present">
+        <div class="container">
+          <h1 class="text-center mb-4"><%= result.hospital_name %></h1>
+          <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-6 col-lg-4">
+              <img
+                src="/images/hospitals/<%= result.hospital_img? result.hospital_img : 'defaultHosp.png' %>"
+                class="img-fluid rounded mb-4"
+                alt="<%= result.hospital_name %>" />
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <div class="info">
+                <p class="card-text">Ubicación: <%= result.city %></p>
+                <p class="card-text">Dirección: <%= result.address %></p>
+                <p class="card-text">
+                  Teléfono:
+                  <a href="tel:<%= result.phone_number %>"><%= result.phone_number %></a>
+                </p>
+                <p class="card-text">
+                  Email:
+                  <a href="mailto:<%= result.email %>"><%= result.email %></a>
+                </p>
+                <div class="bot mt-4 d-flex justify-content-center gap-5">
+                  <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="window.location.href='/hospital/editHospital/<%= result.id_hospital %>'">
+                  Editar Hospital
+                </button>
+                  <button
+                    class="btn btn-warning "
+                    onclick="window.location.href='/hospital/deletedLogic/<%= result.id_hospital %>'">
+                    Eliminar lógica
+                  </button>
+                  <button
+                    class="btn btn-danger"
+                    onclick="window.location.href='/hospital/deletedTotal/<%= result.id_hospital %>'">
+                    Eliminar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="doctors py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Doctores en este hospital</h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <% doctors.forEach((elem) => { %>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="/images/doctors/<%= elem.doctor_image ? elem.doctor_image : 'default-profile.png' %>"
+                  class="card-img-top"
+                  alt="<%= elem.doctor_name %> <%= elem.last_name %>" />
+                <div class="card-body">
+                  <h5 class="card-title"><%= elem.doctor_name %> <%= elem.last_name %></h5>
+                  <p class="card-text"><%= elem.university_degree %></p>
+                  <p class="card-text">Especialidad: <%= elem.speciality %></p>
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Descripción
+                  </a>
+                  <ul class="dropdown-menu">
+                    <p class="card-text">Descripción: <%= elem.description_dr %></p>
+                  </ul>
+                  <button
+                    type="button"
+                    class="btn btn-primary mt-3"
+                    onclick="window.location.href='/doctors/editDoctor/<%= elem.id_doctor %>'">
+                    Editar Perfil
+                  </button>
+                </div>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+          <div class="text-center mb-4">
+            <button
+              class="btn btn-primary"
+              onclick="window.location.href='/doctors/addDoctors/<%= result.id_hospital %>'">
+              + Agregar Doctor/a
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer><%- include("modules/footer.ejs") %></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

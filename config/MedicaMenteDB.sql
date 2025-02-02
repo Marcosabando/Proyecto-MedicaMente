@@ -11,7 +11,7 @@ CREATE TABLE hospital(
     city VARCHAR(85) NOT NULL, --  se abrevia como Taumata Hill, su nombre original es Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu.
 	description VARCHAR(255),
 	hospital_img VARCHAR(255),
-    hospital_deleted BOOLEAN DEFAULT 0
+    hospital_deleted BOOLEAN NOT NULL DEFAULT 0
 );
 
 CREATE TABLE doctor(
@@ -23,7 +23,7 @@ CREATE TABLE doctor(
 	description_dr VARCHAR(255),
 	university_degree VARCHAR(180) NOT NULL,
 	doctor_image VARCHAR(255),
-	doctor_delete BOOLEAN DEFAULT 0,
+	doctor_delete BOOLEAN NOT NULL DEFAULT 0,
 
     CONSTRAINT fk_id_hospital FOREIGN KEY (id_hospital) 
     REFERENCES hospital(id_hospital) ON DELETE CASCADE ON UPDATE CASCADE
@@ -35,4 +35,4 @@ VALUES("Hospital Universitario Virgen del Rocío","Av. Manuel Siurot, S/n, 41013
 
 
 INSERT INTO doctor (id_hospital, doctor_name, last_name, speciality, description_dr, university_degree, doctor_image)
-VALUES (1, "Jose Manuel", "Herrera Justiniano", "Aparato Digestivo EII", "Dr.Herrera Especializado en Enfermedades Intestinal Irritable, con mas de 40 años de experiencia y un largo historial de éxitos ante la enfermedad de Crohn", "Dr.Medicina Interna", "justi.jpg");
+VALUES (1, "Jose Manuel", "Herrera Justiniano", "Aparato Digestivo EII", "Doctor Herrera Especializado en Enfermedades Intestinal Irritable, con mas de 40 años de experiencia y un largo historial de éxitos ante la enfermedad de Crohn", "Doctor Medicina Interna", "justi.jpg");

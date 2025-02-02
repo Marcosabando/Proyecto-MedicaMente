@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/3947aef1e2.js" crossorigin="anonymous"></script>
+    <title>Registro de Doctores/as</title>
+    <link rel="stylesheet" href="/stylesheets/commonStyles.css" />
+    <link rel="stylesheet" href="/stylesheets/register.css" />
+  </head>
+  <body>
+    <header><%- include("modules/navbar.ejs") %></header>
+    <main>
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+          <div class="col-3">
+            <form action="/doctors/addDoctor/<%= id_hospital %>" method="post" enctype="multipart/form-data">
+              <h3>Añadir Doctor/a</h3>
+              <div class="mb-3">
+                <label for="inputDoctorName" class="form-label">Nombre:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputDoctorName"
+                  aria-describedby="emailHelp"
+                  name="doctor_name" />
+              </div>
+              <div class="mb-3">
+                <label for="inputDoctorLastName" class="form-label">Apellidos:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputDoctorLastName"
+                  aria-describedby="emailHelp"
+                  name="last_name" />
+              </div>
+              <div class="mb-3">
+                <label for="inputDoctorSpeciality" class="form-label">Especialidad:</label>
+                <select class="form-select" id="inputDoctorSpeciality" name="speciality" required>
+                  <option value="">Seleccione una especialidad</option>
+                  <option value="cardiologia">Cardiología</option>
+                  <option value="dermatologia">Dermatología</option>
+                  <option value="digestiva">Medicina Digestiva</option>
+                  <option value="endocrinologia">Endocrinología</option>
+                  <option value="gastroenterologia">Gastroenterología</option>
+                  <option value="ginecologia">Ginecología</option>
+                  <option value="medicina_urgencias">Medicina de Urgencias</option>
+                  <option value="neurologia">Neurología</option>
+                  <option value="neumologia">Neumología</option>
+                  <option value="oncologia">Oncología</option>
+                  <option value="oftalmologia">Oftalmología</option>
+                  <option value="ortopedia">Ortopedia</option>
+                  <option value="pediatria">Pediatría</option>
+                  <option value="psiquiatria">Psiquiatría</option>
+                  <option value="traumatologia">Traumatología</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="inputUniversityDegree" class="form-label">Cértificado Universitario: </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputUniversityDegree"
+                  aria-describedby="emailHelp"
+                  name="university_degree"
+                 >
+              </div>
+         
+              <div class="mb-3">
+                <label for="inputDescription" class="form-label">Descripción: </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputDescription"
+                  aria-describedby="emailHelp"
+                  name="description"
+                 >
+              </div>
+
+              
+
+              <div class="mb-3">
+                <label for="inputAlbumImg" class="form-label">Sube una imagen</label>
+                <input type="file" class="form-control" id="inputAlbumImg" name="imagen" />
+              </div>
+              <p style="color: red;"><%= typeof message != 'undefined'? message:null %></p>
+              <button type="submit" class="btn btn-primary">Aceptar</button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="window.location.href='/hospital/singleHospital/id_hospital'">
+                Cancelar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><%- include("modules/footer.ejs") %></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

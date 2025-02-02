@@ -1,0 +1,168 @@
+.present {
+  padding: 3rem 0;
+  background-color: #DCEDC8;
+}
+
+.present h1 {
+  color: #212121;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.present img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 4px solid #fff;
+}
+
+.present .info {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.present .info p {
+  color: #757575;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.present .info a {
+  color: #689F38;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.present .info a:hover {
+  color: #8BC34A;
+}
+
+.bot {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.bot .btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 160px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.bot .btn-primary {
+  background-color: #689F38;
+  border-color: #689F38;
+}
+
+.bot .btn-primary:hover {
+  background-color: #8BC34A;
+  border-color: #8BC34A;
+  transform: translateY(-2px);
+}
+
+.bot .btn-warning {
+  background-color: #FFA000;
+  border-color: #FFA000;
+  color: white;
+}
+
+.bot .btn-warning:hover {
+  background-color: #FFB300;
+  border-color: #FFB300;
+  transform: translateY(-2px);
+}
+
+.bot .btn-danger {
+  background-color: #D32F2F;
+  border-color: #D32F2F;
+}
+
+.bot .btn-danger:hover {
+  background-color: #F44336;
+  border-color: #F44336;
+  transform: translateY(-2px);
+}
+
+.doctors {
+  background-color: white;
+}
+
+.doctors h2 {
+  color: #212121;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.doctors .card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.doctors .card:hover {
+  transform: translateY(-5px);
+}
+
+.doctors .card-img-top {
+  height: 250px;
+  object-fit: cover;
+  object-position: top center;
+  border-bottom: 3px solid #8BC34A;
+}
+
+.doctors .card-body {
+  padding: 1.5rem;
+}
+
+.doctors .card-title {
+  color: #212121;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.doctors .card-text {
+  color: #757575;
+  margin-bottom: 0.5rem;
+}
+
+.doctors .nav-link.dropdown-toggle {
+  color: #689F38 !important;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.doctors .dropdown-menu {
+  background-color: white;
+  border: 1px solid #DCEDC8;
+  padding: 1rem;
+}
+
+.doctors .dropdown-menu p {
+  color: #757575;
+  margin: 0;
+}
+
+.doctors .btn-primary {
+  background-color: #689F38;
+  border-color: #689F38;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: 500;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.doctors .btn-primary:hover {
+  background-color: #8BC34A;
+  border-color: #8BC34A;
+  transform: translateY(-2px);
+}
