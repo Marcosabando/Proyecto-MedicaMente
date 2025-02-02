@@ -2,11 +2,15 @@ const connection = require("../config/db");
 
 class DoctorsControllers {
   allDoctors = (req, res) => {
-    let sql = `SELECT * FROM doctor WHERE doctor_delete = 0`;
+
+    let sql = `SELECT id_doctor, doctor_name, last_name, speciality, doctor_image,hospital.hospital_name FROM doctor, hospital WHERE doctor.id_hospital = hospital.id_hospital 
+AND doctor_delete = 0;`;
     connection.query(sql, (err, result) => {
       if (err) {
         throw err;
       } else {
+        console.log("JAVILACHUPA",result);
+        
         res.render("allDoctors", { result: result });
       }
     });
@@ -131,6 +135,54 @@ class DoctorsControllers {
       }
     });
   };
-}
 
+
+
+  getAllDoctors = (req, res) => {
+    let sql = `SELECT doctor.doctor_name, doctor.last_name, doctor.speciality, 
+               doctor.doctor_image, hospital.hospital_name 
+               FROM doctor, hospital 
+               WHERE doctor.id_hospital = hospital.id_hospital 
+               AND doctor_deleted = 0`;
+
+    connection.query(sql, (err, results) => {
+        if (err) {
+            console.error('Error in database query:', err);
+            return res.status(500).send('Error en la base de datos');
+        }
+        res.render('allDoctors', { result: results, speciality: '' });
+    });
+};
+
+searchSpeciality = (req, res) => {
+  const speciality = req.query.speciality;
+  console.log('Especialidad buscada:', speciality);
+
+  if (!speciality || speciality === 'Select') {
+
+      let sql = `SELECT doctor.doctor_name, doctor.last_name, doctor.speciality, doctor.doctor_image, hospital.hospital_name FROM doctor, hospital WHERE doctor.id_hospital = hospital.id_hospital`;
+                 
+      connection.query(sql, (err, results) => {
+          if (err) {
+              console.error('Error en la consulta:', err);
+              res.send('Error en la base de datos');
+          }
+          console.log('Resultados:', results);
+          res.render('allDoctors', { result: results, speciality: '' });
+      });
+  } else {
+      let sql = `SELECT doctor.doctor_name, doctor.last_name, doctor.speciality, doctor.doctor_image, hospital.hospital_name FROM doctor, hospital WHERE doctor.id_hospital = hospital.id_hospital AND doctor.speciality = ?`;
+
+      connection.query(sql, [speciality], (err, results) => {
+          if (err) {
+              console.error('Error en la consulta:', err);
+              res.send('Error en la base de datos');
+          }
+          console.log('Resultados encontrados:', results.length);
+          console.log('Resultados:', results);
+          res.render('allDoctors', { result: results, speciality });
+      });
+  }
+};
+}
 module.exports = new DoctorsControllers();

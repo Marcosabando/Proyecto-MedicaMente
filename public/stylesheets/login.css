@@ -1,0 +1,52 @@
+body{
+  background-image: url(/images/login.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(0.2rem);
+}
+
+.login-card {
+  color: #757575;
+  background-color: #212121;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 2px solid #689F38;
+}
+
+
+.form-control {
+  border: 2px solid #212121;
+  background-color: #BDBDBD;
+}
+
+.btn-success {
+  color: #757575;
+  background-color: #8BC34A;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #689F38;
+}
+
+.btn-secondary {
+  color: #757575;
+  background-color: #DCEDC8;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #689F38;
+}
+
+a{
+  color: #689F38;
+}
+
+a:hover{
+  color: #DCEDC8;
+}

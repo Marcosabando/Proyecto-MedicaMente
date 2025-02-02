@@ -13,9 +13,15 @@
   color: #2c3e50;
 }
 
+.search-container{
+  display: flex;
+  justify-content: end;
+}
+
 .search-container form {
   display: flex;
   align-items: center;
+  justify-content: end;
   gap: 10px;
 }
 
@@ -52,6 +58,7 @@
 
 h2{
   padding-top: 3rem;
+  color: #757575;
   font-weight: bold;
 }
 
@@ -86,7 +93,7 @@ h2{
 }
 
 .card-body {
-  background-color: #8BC34A;
+  background-color: #DCEDC8;
   padding: 20px;
   border-radius: 0 0 15px 15px;
 }

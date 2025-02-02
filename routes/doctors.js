@@ -17,4 +17,6 @@ router.post('/editDoctor/:id', doctorsControllers.editDoctor);
 router.get('/logicDeleted/:id', doctorsControllers.logicDeleted);
 router.get('/totalDeleted/:id', doctorsControllers.totalDeleted);
 
+router.get('/', doctorsControllers.getAllDoctors);
+router.get('/search', doctorsControllers.searchSpeciality);
 module.exports = router;

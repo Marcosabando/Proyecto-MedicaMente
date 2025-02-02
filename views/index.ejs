@@ -14,101 +14,110 @@
     </header>
      <main>
       <section class="head">
-        <div id="carouselExampleIndicators" class="carousel slide">
+        <div id="carouselExampleIndicators" class="carousel slide carrousel" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="/images/olga.jpg" class="d-block w-100" alt="Imagen 1">
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="/images/jafar.jpg" class="d-block w-100" alt="Imagen 2">
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="/images/irwan.jpg" class="d-block w-100" alt="Imagen 3">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/national.jpg" class="d-block w-100" alt="Imagen 4">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/piron.jpg" class="d-block w-100" alt="Imagen 5">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Anterior</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Siguiente</span>
           </button>
         </div>
         <h1>¿Cómo de importante es tu salud para tí?</h1>
       </section>
 
       <section class="advance">
-        <div class="container py-4">
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="custom-card">
-                        <img src="images/terapia-genica.png" class="custom-card-img" alt="Novedad 1">
-                        <div class="custom-card-body">
-                            <h5 class="custom-card-title">Avance en Terapia Génica</h5>
-                            <p class="custom-card-text">Nuevas investigaciones muestran avances prometedores en la terapia génica para enfermedades raras.</p>
-                            <a href="#" class="btn-primary">Leer más</a>
-                        </div>
-                    </div>
+        <div class="container d-flex justify-content-center">
+          <div class="row">
+            <h2>Nuevos Avances</h2>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex ">
+              <div class="custom-card">
+                <img src="images/terapia-genica.png" class="custom-card-img" alt="Novedad 1">
+                <div class="custom-card-body">
+                  <h5 class="custom-card-title">Avance en Terapia Génica</h5>
+                  <p class="custom-card-text">Nuevas investigaciones muestran avances prometedores en la terapia génica para enfermedades raras.</p>
+                  <a href="#" class="btn-sec">Leer más</a>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="custom-card">
-                        <img src="images/vacunas.jpg" class="custom-card-img" alt="Novedad 2">
-                        <div class="custom-card-body">
-                            <h5 class="custom-card-title">Vacunas</h5>
-                            <p class="custom-card-text">Científicos desarrollan vacunas con nanotecnología para mejorar la inmunización.</p>
-                            <a href="#" class="btn-primary">Leer más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="custom-card">
-                        <img src="images/cirugia.webp" class="custom-card-img" alt="Novedad 3">
-                        <div class="custom-card-body">
-                            <h5 class="custom-card-title">Cirugía Robótica Avanzada</h5>
-                            <p class="custom-card-text">Nuevos robots quirúrgicos permiten intervenciones más precisas y menos invasivas.</p>
-                            <a href="#" class="btn-primary">Leer más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="custom-card">
-                        <img src="images/avance.webp" class="custom-card-img" alt="Novedad 4">
-                        <div class="custom-card-body">
-                            <h5 class="custom-card-title">Avance en Alzheimer</h5>
-                            <p class="custom-card-text">Un nuevo fármaco demuestra ralentizar el avance del Alzheimer en estudios clínicos.</p>
-                            <a href="#" class="btn-primary">Leer más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="custom-card">
-                        <img src="images/medicina.jpg" class="custom-card-img" alt="Novedad 5">
-                        <div class="custom-card-body">
-                            <h5 class="custom-card-title">Medicina Personalizada</h5>
-                            <p class="custom-card-text">Nuevas herramientas de IA permiten tratamientos más precisos y personalizados.</p>
-                            <a href="#" class="btn-primary">Leer más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="custom-card">
-                        <img src="images/protesis.jpg" class="custom-card-img" alt="Novedad 6">
-                        <div class="custom-card-body">
-                            <h5 class="custom-card-title">Prótesis Inteligentes</h5>
-                            <p class="custom-card-text">Nuevas prótesis controladas por el cerebro mejoran la movilidad de los pacientes.</p>
-                            <a href="#" class="btn-primary">Leer más</a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+              <div class="custom-card">
+                <img src="images/vacunas.jpg" class="custom-card-img" alt="Novedad 2">
+                <div class="custom-card-body">
+                  <h5 class="custom-card-title">Vacunas</h5>
+                  <p class="custom-card-text">Científicos desarrollan vacunas con nanotecnología para mejorar la inmunización.</p>
+                  <a href="#" class="btn-sec">Leer más</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+              <div class="custom-card">
+                <img src="images/cirugia.webp" class="custom-card-img" alt="Novedad 3">
+                <div class="custom-card-body">
+                  <h5 class="custom-card-title">Cirugía Robótica Avanzada</h5>
+                  <p class="custom-card-text">Nuevos robots quirúrgicos permiten intervenciones más precisas y menos invasivas.</p>
+                  <a href="#" class="btn-sec">Leer más</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+              <div class="custom-card">
+                <img src="images/avance.webp" class="custom-card-img" alt="Novedad 4">
+                <div class="custom-card-body">
+                  <h5 class="custom-card-title">Avance en Alzheimer</h5>
+                  <p class="custom-card-text">Un nuevo fármaco demuestra ralentizar el avance del Alzheimer en estudios clínicos.</p>
+                  <a href="#" class="btn-sec">Leer más</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+              <div class="custom-card">
+                <img src="images/medicina.jpg" class="custom-card-img" alt="Novedad 5">
+                <div class="custom-card-body">
+                  <h5 class="custom-card-title">Medicina Personalizada</h5>
+                  <p class="custom-card-text">Nuevas herramientas de IA permiten tratamientos más precisos y personalizados.</p>
+                  <a href="#" class="btn-sec">Leer más</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+              <div class="custom-card">
+                <img src="images/protesis.jpg" class="custom-card-img" alt="Novedad 6">
+                <div class="custom-card-body">
+                  <h5 class="custom-card-title">Prótesis Inteligentes</h5>
+                  <p class="custom-card-text">Nuevas prótesis controladas por el cerebro mejoran la movilidad de los pacientes.</p>
+                  <a href="#" class="btn-sec">Leer más</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
           <section class="icons">
             <div class="container">

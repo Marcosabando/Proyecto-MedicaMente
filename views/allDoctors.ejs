@@ -17,28 +17,29 @@
           <div class="col-12 text-center mb-4">
             <h2>Lista de Doctores</h2>
             <div class="search-container">
-              <form action="/buscar" method="GET">
+              <form action="/doctors/search" method="GET">
                   <input type="search" 
-                         name="q" 
+                         name="speciality" 
                          list="speciality" 
-                         placeholder="Buscar...">
+                         placeholder="Buscar Especialidad...">
                   
                   <datalist id="speciality">
-                    <option value="cardiologia">Cardiología</option>
-                    <option value="dermatologia">Dermatología</option>
-                    <option value="digestiva">Medicina Digestiva</option>
-                    <option value="endocrinologia">Endocrinología</option>
-                    <option value="gastroenterologia">Gastroenterología</option>
-                    <option value="ginecologia">Ginecología</option>
-                    <option value="medicina_urgencias">Medicina de Urgencias</option>
-                    <option value="neurologia">Neurología</option>
-                    <option value="neumologia">Neumología</option>
-                    <option value="oncologia">Oncología</option>
-                    <option value="oftalmologia">Oftalmología</option>
-                    <option value="ortopedia">Ortopedia</option>
-                    <option value="pediatria">Pediatría</option>
-                    <option value="psiquiatria">Psiquiatría</option>
-                    <option value="traumatologia">Traumatología</option>
+                    <option value="Select">Selecciona una opción</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Dermatología">Dermatología</option>
+                    <option value="Digestiva">Medicina Digestiva</option>
+                    <option value="Endocrinologia">Endocrinología</option>
+                    <option value="Gastroenterologia">Gastroenterología</option>
+                    <option value="Ginecologia">Ginecología</option>
+                    <option value="Medicina_urgencias">Medicina de Urgencias</option>
+                    <option value="Neurologia">Neurología</option>
+                    <option value="Neumologia">Neumología</option>
+                    <option value="Oncologia">Oncología</option>
+                    <option value="Oftalmologia">Oftalmología</option>
+                    <option value="Ortopedia">Ortopedia</option>
+                    <option value="Pediatria">Pediatría</option>
+                    <option value="Psiquiatria">Psiquiatría</option>
+                    <option value="Traumatologia">Traumatología</option>
                   </datalist>
                   
                   <input type="submit" value="Buscar">
@@ -47,17 +48,24 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <% result.forEach((elem)=>{ %>
-            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
-              <div class="card">
-                <img src="/images/doctors/<%= elem.doctor_image? elem.doctor_image : 'default-profile.png' %>" class="card-img-top" alt="Doctor Image">
-                <div class="card-body">
-                  <h5 class="card-title"><%= elem.doctor_name %> <%= elem.last_name %></h5>
-                  <p class="card-text">Especialidad: <%= elem.speciality %></p>
+          <% if (result && result.length > 0) { %>
+            <% result.forEach((elem) => { %>
+              <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+                <div class="card">
+                  <img src="/images/doctors/<%= elem.doctor_image || 'default-profile.png' %>" class="card-img-top" alt="Doctor Image">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= elem.doctor_name %> <%= elem.last_name %></h5>
+                    <p class="card-text">Especialidad: <%= elem.speciality %></p>
+                    <p class="card-text">Residente en: <%= elem.hospital_name %></p>
+                  </div>
                 </div>
               </div>
+            <% }) %>
+          <% } else { %>
+            <div class="col-12 text-center">
+              <h3>No se encontraron doctores con la especialidad seleccionada</h3>
             </div>
-          <% }) %>
+          <% } %>
         </div>
       </div>
     </main>

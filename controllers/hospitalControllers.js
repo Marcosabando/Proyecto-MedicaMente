@@ -123,15 +123,13 @@ class HospitalControllers {
       res.redirect(`/hospital/editHospital/${id}`);
 
     } else {
-      let sql = `SELECT phone_number, email, description FROM hospital WHERE id_hospital = ${id} AND hospital_deleted = 0`;
+      let sql = `UPDATE hospital SET phone_number = "${phone_number}", email = "${email}", description = "${description}" WHERE id_hospital = ${id} AND hospital_deleted = 0`;
 
           connection.query(sql, (err, result) => {
             if (err) {
               throw err;
             } else {
-              let id_hospital = result[0].id_hospital;
-  
-              res.redirect(`/hospital/singleHospital/${id_hospital}`);
+              res.redirect(`/hospital/singleHospital/${id}`);
             }
           });
         }

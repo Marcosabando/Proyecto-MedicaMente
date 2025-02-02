@@ -23,7 +23,7 @@ CREATE TABLE doctor(
 	description_dr VARCHAR(255),
 	university_degree VARCHAR(180) NOT NULL,
 	doctor_image VARCHAR(255),
-	doctor_delete BOOLEAN NOT NULL DEFAULT 0,
+	doctor_deleted BOOLEAN NOT NULL DEFAULT 0,
 
     CONSTRAINT fk_id_hospital FOREIGN KEY (id_hospital) 
     REFERENCES hospital(id_hospital) ON DELETE CASCADE ON UPDATE CASCADE
