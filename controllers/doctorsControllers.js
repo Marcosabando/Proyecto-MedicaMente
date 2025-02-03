@@ -9,8 +9,6 @@ AND doctor_delete = 0;`;
       if (err) {
         throw err;
       } else {
-        console.log("JAVILACHUPA",result);
-        
         res.render("allDoctors", { result: result });
       }
     });
