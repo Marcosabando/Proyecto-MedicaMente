@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+h3, label {
+  color: #BDBDBD;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px;
+}
+
+input, select, button {
+  margin-bottom: 15px;
+}
+
+form {
+  background-color: #212121;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 5rem;
+}
+
+p {
+  font-size: 14px;
+}
+

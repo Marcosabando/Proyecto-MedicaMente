@@ -1,0 +1,118 @@
+
+body{
+  background-color: aqua;
+
+}
+form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #212121;
+  border-radius: 10px;
+  border: 2px solid #689F38;
+
+
+  h3{
+    color: #aaa;
+  }
+  
+  .med{
+      width: 5rem;
+      opacity: 50%;
+      border-style: none;
+  }
+
+  span{
+    color: #8BC34A;
+  }
+}
+
+.login-title {
+  color: #aaa;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  margin-bottom: 1rem;
+  background-color: rgb(106, 190, 72);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.btnns{
+  padding-top: 4rem;
+  margin-right: 4rem;
+
+  .btnn{
+    margin-bottom: 1rem;
+    border-style: none;
+    width: 7rem;
+    height: 4rem;
+    background-color: rgb(106, 190, 72);
+    color: #333;
+  }
+}
+
+.register-link {
+  text-align: center;
+  color: #aaa;
+  margin-top: 1.5rem;
+}
+
+.register-link a {
+  color: rgb(106, 190, 72);
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  background-color: #333;
+  text-decoration: none;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 2rem;
+}
+ .img{
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  margin-right: 4rem;
+  border: 2px solid #689F38;
+
+}

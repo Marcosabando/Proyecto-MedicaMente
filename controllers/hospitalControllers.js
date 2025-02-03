@@ -69,7 +69,7 @@ class HospitalControllers {
             }
           });
         } else {
-          res.render("login", { message: "Email Incorrecto" });
+          res.render("login", { message: "Usuario o Contraseña Incorrecta" });
         }
       }
     });

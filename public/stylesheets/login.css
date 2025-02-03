@@ -15,6 +15,15 @@ body{
   max-width: 400px;
   text-align: center;
   border: 2px solid #689F38;
+
+  h3{
+    padding: 1rem 0;
+  }
+
+  img{
+    width: 5rem;
+    opacity: 50%;
+  }
 }
 
 
@@ -41,6 +50,10 @@ body{
 
 .btn-secondary:hover {
   background-color: #689F38;
+}
+
+.mt-3 {
+ padding: 1rem 0;
 }
 
 a{

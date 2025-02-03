@@ -10,19 +10,43 @@
       crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/3947aef1e2.js" crossorigin="anonymous"></script>
     <title>Edita tu perfil</title>
-    <link rel="stylesheet" href="/stylesheets/commonStyles.css" />
-    <link rel="stylesheet" href="/stylesheets/register.css" />
-    <link rel="stylesheet" href="/stylesheets/formEditBand.css" />
+    <link rel="stylesheet" href="/stylesheets/global.css" />
+    <link rel="stylesheet" href="/stylesheets/editDoctors.css" />
   </head>
   <body>
-    <header><%- include("modules/navbar.ejs") %></header>
-
+    <header>
+      <%- include("modules/navbar.ejs") %>
+    </header>
     <main>
-      <div class="container-fluid">
+      <div class="container-fluid py-4 ">
         <div class="row d-flex justify-content-center">
-          <div class="col-3">
+          <div class="col-11 col-md-4 col-lg-3 mb-4 mb-md-0 d-flex justify-content-center align-items-center flex-column" >
+            <div class="men">
+              <img 
+                src="/images/doctors/<%= result.doctor_image? result.doctor_image : 'default-profile.png' %>"
+                class="img rounded"
+                alt="<%= result.doctor_name %>" />
+            </div>
+              <div class="btnns d-flex justify-content-center gap-4">
+                <button
+                  class="btnn"
+                  onclick="window.location.href='/doctors/totalDeleted/<%= result.id_doctor %>'">
+                  Eliminar
+                </button>
+                <button
+                  class="btnn"
+                  onclick="window.location.href='/doctors/logicDeleted/<%= result.id_doctor %>'">
+                  Eliminar lógica
+                </button>
+              </div>
+          </div>
+
+          <div class="col-11 col-md-7 col-lg-6">
             <form action="/doctors/editDoctor/<%= result.id_doctor %>" method="post">
-              <h3>Edita tu perfil: <%= result.doctor_name %></h3>
+              <div class="men d-flex justify-content-between align-items-center">
+                <h3 class="mb-4">Edita tu perfil: <span><%= result.doctor_name %></span></h3>
+                <img class="med" src="/images/MedicaMente.png" alt="">
+              </div>
 
               <div class="info">
                 <div class="mb-3">
@@ -78,28 +102,17 @@
 
                 <p style="color: red;"><%= typeof message != 'undefined' ? message : null %></p>
 
-                <button type="submit" class="btn btn-primary">Aceptar</button>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  onclick="window.location.href='/hospital/singleHospital/<%= result.id_hospital %>'">
-                  Cancelar
-                </button>
+                <div class="d-flex gap-2 flex-wrap mb-4">
+                  <button type="submit" class="btn btn-primary">Aceptar</button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="window.location.href='/hospital/singleHospital/<%= result.id_hospital %>'">
+                    Cancelar
+                  </button>
+                </div>
               </div>
             </form>
-
-            <div class="bot">
-              <button
-                class="btn btn-danger"
-                onclick="window.location.href='/doctors/totalDeleted/<%= result.id_doctor %>'">
-                Eliminar
-              </button>
-              <button
-                class="btn btn-danger"
-                onclick="window.location.href='/doctors/logicDeleted/<%= result.id_doctor %>'">
-                Eliminar lógica
-              </button>
-            </div>
           </div>
         </div>
       </div>

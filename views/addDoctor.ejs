@@ -10,17 +10,15 @@
       crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/3947aef1e2.js" crossorigin="anonymous"></script>
     <title>Registro de Doctores/as</title>
-    <link rel="stylesheet" href="/stylesheets/commonStyles.css" />
-    <link rel="stylesheet" href="/stylesheets/register.css" />
+    <link rel="stylesheet" href="/stylesheets/addDoctor.css" />
   </head>
   <body>
-    <header><%- include("modules/navbar.ejs") %></header>
     <main>
       <div class="container-fluid">
         <div class="row d-flex justify-content-center">
-          <div class="col-3">
+          <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
             <form action="/doctors/addDoctor/<%= id_hospital %>" method="post" enctype="multipart/form-data">
-              <h3>Añadir Doctor/a</h3>
+              <h3 class="text-center">Añadir Doctor/a</h3>
               <div class="mb-3">
                 <label for="inputDoctorName" class="form-label">Nombre:</label>
                 <input
@@ -83,17 +81,15 @@
                  >
               </div>
 
-              
-
               <div class="mb-3">
                 <label for="inputAlbumImg" class="form-label">Sube una imagen</label>
                 <input type="file" class="form-control" id="inputAlbumImg" name="imagen" />
               </div>
               <p style="color: red;"><%= typeof message != 'undefined'? message:null %></p>
-              <button type="submit" class="btn btn-primary">Aceptar</button>
+              <button type="submit" class="btn btn-success w-100">Aceptar</button>
               <button
                 type="button"
-                class="btn btn-primary"
+                class="btn btn-secondary w-100 mt-2"
                 onclick="window.location.href='/hospital/singleHospital/id_hospital'">
                 Cancelar
               </button>

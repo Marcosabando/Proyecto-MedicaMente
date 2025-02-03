@@ -16,17 +16,17 @@
   <body>
     <header><%- include("modules/navbar.ejs") %></header>
     <main>
-      <section class="present">
+      <section class="present py-3 py-md-4 py-lg-5">
         <div class="container">
-          <h1 class="text-center mb-4"><%= result.hospital_name %></h1>
-          <div class="row justify-content-center align-items-center">
-            <div class="col-12 col-md-6 col-lg-4">
+          <h1 class="text-center mb-3 mb-md-4"><%= result.hospital_name %></h1>
+          <div class="row justify-content-center align-items-center g-4">
+            <div class="col-12 col-sm-10 col-md-6 col-lg-4">
               <img
                 src="/images/hospitals/<%= result.hospital_img? result.hospital_img : 'defaultHosp.png' %>"
                 class="img-fluid rounded mb-4"
                 alt="<%= result.hospital_name %>" />
             </div>
-            <div class="col-12 col-md-6 col-lg-6">
+            <div class="col-12 col-sm-10 col-md-6 col-lg-6">
               <div class="info">
                 <p class="card-text">Ubicación: <%= result.city %></p>
                 <p class="card-text">Dirección: <%= result.address %></p>
@@ -38,15 +38,15 @@
                   Email:
                   <a href="mailto:<%= result.email %>"><%= result.email %></a>
                 </p>
-                <div class="bot mt-4 d-flex justify-content-center gap-5">
+                <div class="bot mt-4 d-flex flex-wrap justify-content-center gap-3">
                   <button
-                  type="button"
-                  class="btn btn-primary"
-                  onclick="window.location.href='/hospital/editHospital/<%= result.id_hospital %>'">
-                  Editar Hospital
-                </button>
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="window.location.href='/hospital/editHospital/<%= result.id_hospital %>'">
+                    Editar Hospital
+                  </button>
                   <button
-                    class="btn btn-warning "
+                    class="btn btn-warning"
                     onclick="window.location.href='/hospital/deletedLogic/<%= result.id_hospital %>'">
                     Eliminar lógica
                   </button>
@@ -64,46 +64,59 @@
 
       <section class="doctors py-5">
         <div class="container">
-          <h2 class="text-center mb-4">Doctores en este hospital</h2>
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <h2 class="text-center mb-4">Doctores en este hospital</h2>   
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
             <% doctors.forEach((elem) => { %>
             <div class="col">
-              <div class="card h-100">
+              <div class="card h-100 shadow-sm">
                 <img
                   src="/images/doctors/<%= elem.doctor_image ? elem.doctor_image : 'default-profile.png' %>"
-                  class="card-img-top"
-                  alt="<%= elem.doctor_name %> <%= elem.last_name %>" />
-                <div class="card-body">
-                  <h5 class="card-title"><%= elem.doctor_name %> <%= elem.last_name %></h5>
-                  <p class="card-text"><%= elem.university_degree %></p>
-                  <p class="card-text">Especialidad: <%= elem.speciality %></p>
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Descripción
-                  </a>
-                  <ul class="dropdown-menu">
-                    <p class="card-text">Descripción: <%= elem.description_dr %></p>
-                  </ul>
+                  class="card-img-top object-fit-cover"
+                  style="height: 200px;"
+                  alt="<%= elem.doctor_name %> <%= elem.last_name %>"
+                >
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold mb-3">
+                    <%= elem.doctor_name %> <%= elem.last_name %>
+                  </h5>
+                  <div class="mb-3">
+                    <p class="card-text mb-2">
+                      <i class="bi bi-mortarboard-fill me-2"></i>
+                      <%= elem.university_degree %>
+                    </p>
+                    <p class="card-text mb-2">
+                      <i class="bi bi-heart-pulse-fill me-2"></i>
+                      <strong>Especialidad:</strong> <%= elem.speciality %>
+                    </p>
+                  </div>
+                  <div class="dropdown mb-3">
+                    <button 
+                      class="btn btn-outline-secondary dropdown-toggle w-100"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Ver Descripción
+                    </button>
+                    <div class="dropdown-menu p-3" style="max-width: 300px;">
+                      <p class="card-text mb-0"><%= elem.description_dr %></p>
+                    </div>
+                  </div>
                   <button
                     type="button"
-                    class="btn btn-primary mt-3"
+                    class="btn btn-primary mt-auto"
                     onclick="window.location.href='/doctors/editDoctor/<%= elem.id_doctor %>'">
-                    Editar Perfil
+                    <i class="bi bi-pencil-square me-2"></i>Editar Perfil
                   </button>
                 </div>
               </div>
             </div>
             <% }) %>
           </div>
-          <div class="text-center mb-4">
+          <div class="text-center mt-5">
             <button
-              class="btn btn-primary"
+              class="btn btn-primary btn-lg"
               onclick="window.location.href='/doctors/addDoctors/<%= result.id_hospital %>'">
-              + Agregar Doctor/a
+              <i class="bi bi-plus-circle me-2"></i>+ Agregar Doctor/a
             </button>
           </div>
         </div>

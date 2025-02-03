@@ -21,7 +21,7 @@
                   <input type="search" 
                          name="speciality" 
                          list="speciality" 
-                         placeholder="Buscar Especialidad...">
+                         placeholder="Buscar Especialidad..." class="form-control">
                   
                   <datalist id="speciality">
                     <option value="Select">Selecciona una opción</option>
@@ -42,7 +42,7 @@
                     <option value="Traumatologia">Traumatología</option>
                   </datalist>
                   
-                  <input type="submit" value="Buscar">
+                  <input type="submit" value="Buscar" class="btn btn-primary mt-2">
               </form>
           </div>
           </div>
@@ -50,7 +50,7 @@
         <div class="row justify-content-center">
           <% if (result && result.length > 0) { %>
             <% result.forEach((elem) => { %>
-              <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                 <div class="card">
                   <img src="/images/doctors/<%= elem.doctor_image || 'default-profile.png' %>" class="card-img-top" alt="Doctor Image">
                   <div class="card-body">

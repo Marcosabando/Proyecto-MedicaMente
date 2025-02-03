@@ -104,6 +104,7 @@
 
 .doctors .card {
   border: none;
+  background-color: #DCEDC8;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -141,7 +142,7 @@
 }
 
 .doctors .dropdown-menu {
-  background-color: white;
+  background-color: #DCEDC8;
   border: 1px solid #DCEDC8;
   padding: 1rem;
 }

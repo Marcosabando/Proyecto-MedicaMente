@@ -43,7 +43,7 @@ AND doctor_delete = 0;`;
 
   formEditDoctor = (req, res) => {
     const { id } = req.params;
-    let sql = `SELECT id_doctor, id_hospital, doctor_name, last_name, speciality, description_dr, university_degree FROM doctor WHERE id_doctor = ${id} AND doctor_delete = 0`;
+    let sql = `SELECT id_doctor, id_hospital, doctor_name, last_name, speciality, description_dr, university_degree, doctor_image FROM doctor WHERE id_doctor = ${id} AND doctor_delete = 0`;
 
     connection.query(sql, (err, result) => {
       if (err) {

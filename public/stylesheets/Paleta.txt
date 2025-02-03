@@ -1,0 +1,9 @@
+
+#689F38 = dark primary color
+#DCEDC8 - lith primary color
+#8BC34A - primary color 
+#212121 - text and icons
+#9E9E9E - accent color
+#212121 - primary text
+#757575 - secondary text
+#BDBDBD - divider color
