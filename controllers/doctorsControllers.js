@@ -4,7 +4,7 @@ class DoctorsControllers {
   allDoctors = (req, res) => {
 
     let sql = `SELECT id_doctor, doctor_name, last_name, speciality, doctor_image,hospital.hospital_name FROM doctor, hospital WHERE doctor.id_hospital = hospital.id_hospital 
-AND doctor_delete = 0;`;
+    AND doctor_delete = 0;`;
     connection.query(sql, (err, result) => {
       if (err) {
         throw err;
